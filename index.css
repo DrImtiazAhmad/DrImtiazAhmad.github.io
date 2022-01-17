@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+#body{
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    font-family: 'Dongle', sans-serif;
+    user-select: none;
+}
+.NavBar{
+    height: 100px;
+    width: 100%;
+    background-color: royalblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    top: 0;
+}
+.NavBarLogo{
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    background-size: contain;
+    transition: all 200ms linear;
+}
+.NavLink{
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    transition: all 200ms linear;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.NavLink:hover{
+    font-size: 3em;
+}
+.NavTitle{
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 4em;
+    margin-right: 50px;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: -35px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-shadow: 0px 0px 6px black;
+    transition: all 200ms linear;
+}
+.NavSubTitleDiv{
+    display: inline;
+}
+.NavSubTitle{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 200ms linear;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    text-shadow: 0px 0px 2px black;
+}
+.NavTitleCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Title{
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-size: 4em;
+    margin-bottom: 40px;
+    line-height: 50px;
+}
+#AboutSection{
+    margin-top: 130px;
+}
+.Card{
+    width: 200px;
+    height: 250px;
+    max-width: 200px;
+    min-width: 150px;
+    border-radius: 40px;
+    margin: 10px;
+    background-image: linear-gradient(to bottom right, red, royalblue);
+}
+.CardTitle{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.8em;
+}
+.CardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.CardDarkner:hover > .CardLinkCon{
+    flex: auto;
+}
+.CardLinkCon{
+    display: flex;
+    flex:0;
+    transition: all 200ms linear;
+    justify-content: end;
+    align-items: flex-end;
+}
+.CardDarkner{
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.655);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms linear;
+}
+.Card:hover > div{
+    background-color: transparent;
+}
+.Card:hover > div > div> a{
+    opacity: 1;
+    display: block;
+}
+.CardLink{
+    padding: 5px;
+    border: 2px solid white;
+    transition: all 200ms linear;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: none;
+    opacity: 0;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.CardLink:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+  @media screen and (max-width: 900px) {
+    .NavTitle{
+        font-size: 3em;
+        margin-right: 20px;
+    }
+    .NavSubTitle{
+        font-size: 0.8em;
+    }
+    .NavTitle{
+        margin-bottom: -20px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .NavTitle{
+        font-size: 2em !important;
+        margin-right: 20px;
+    }
+    .NavLink{
+        font-size: 1.5em;
+    }
+    .NavLink:hover{
+        font-size: 2em;
+    }
+    .NavBarLogo{
+        width: 60px;
+        height: 60px;
+    }
+    .Card{
+        flex: 40%;
+    }
+    .NavSubTitle{
+        font-size: 0.8em;
+    }
+    .NavSubTitleDiv{
+        display: block;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: -10px;
+        text-align: left;
+        padding-left: 5px;
+    }
+}
