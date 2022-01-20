@@ -4,6 +4,9 @@
     margin: 0px;
     padding: 0px;
 }
+html {
+    scroll-behavior: smooth;
+  }
 *{
     font-family: 'Dongle', sans-serif;
     user-select: none;
@@ -16,21 +19,24 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 10px !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
     position: fixed;
     top: 0;
+    min-width: 350px;
+    z-index: 99;
 }
 .NavBarLogo{
     width: 80px;
     height: 80px;
     border-radius: 20%;
-    background-size: contain;
+    object-fit: cover;
     transition: all 200ms linear;
 }
 .NavLink{
     font-size: 2em;
-    color: white;
+    color: white !important;
     cursor: pointer;
     transition: all 200ms linear;
     padding-left: 10px;
@@ -54,7 +60,7 @@
     margin-bottom: -35px;
     padding-top: 0;
     padding-bottom: 0;
-    text-shadow: 0px 0px 6px black;
+    text-shadow: 0px 0px 3px black;
     transition: all 200ms linear;
 }
 .NavSubTitleDiv{
@@ -62,15 +68,16 @@
 }
 .NavSubTitle{
     color: white;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 0px;
     padding-top: 0;
     padding-bottom: 0;
     transition: all 200ms linear;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     font-style: italic;
     text-shadow: 0px 0px 2px black;
+    line-height: 20px;
 }
 .NavTitleCon{
     display: flex;
@@ -84,24 +91,30 @@
     font-size: 4em;
     margin-bottom: 40px;
     line-height: 50px;
+    margin-top: 30px;
 }
 #AboutSection{
-    margin-top: 130px;
+    margin-top: 120px;
 }
 .Card{
     width: 200px;
     height: 250px;
     max-width: 200px;
-    min-width: 150px;
+    min-width: 160px;
     border-radius: 40px;
     margin: 10px;
-    background-image: linear-gradient(to bottom right, red, royalblue);
+    transition: all 200ms linear;
+}
+.Card:hover{
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px black;
 }
 .CardTitle{
     color: white;
     font-style: italic;
     text-align: center;
     font-size: 1.8em;
+    margin-top: 20px;
 }
 .CardContainer{
     display: flex;
@@ -124,7 +137,7 @@
     width: 100%;
     height: 100%;
     border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.655);
+    background-color: rgba(0, 0, 0, 0.255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -155,21 +168,275 @@
     color: black;
     text-decoration: none;
 }
+.NavLinkCon{
+    display: flex; 
+    flex-direction: row;
+}
+.NavLogoCon{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+#backToTop{
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    width:60px;
+    height: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: orange;
+    border: 3px double black;
+    transition: all 200ms linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    z-index: 99;
+}
+#backToTop > i{
+    font-size: 2em;
+    color: white;
+}
+#backToTop:hover{
+    opacity: 1 !important;
+    border: 3px solid black;
+}
+.InfoText{
+    width: 50%;
+    margin: auto;
+    font-size: 1.5em;
+    padding: 0px;
+    line-height: 20px;
+}
+.carousel-item{
+    max-height: 500px;
+}
+.carousel-item > img{
+    max-height: 500px;
+    height: 500px;
+    width: auto;
+    object-fit: fill;
+}
+.carousel-indicators > li{
+    background-color: black !important;
+    opacity: 0.5;
+    height: 12px !important;
+    width: 12px !important;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+.carousel-indicators > .active{
+    border-radius: 100%;
+    border: 3px solid black !important;
+    background-color: white !important;
+    opacity: 0.9;
+}
+.carousel-control-button > span{
+    width: 40px;
+    height: 40px;
+}
+.carousel-control-button{
+    background-color: rgba(0, 0, 0,0.1);
+    width: 10% !important;
+    transition: all 200ms linear;
+}
+.carousel-control-button:hover{
+    background-color: rgba(0, 0, 0,0.5);
+}
+.carousel{
+    border: 5px solid silver;
+    border-radius: 20px;
+    width: 70% !important;
+    overflow: hidden;
+    margin: auto;
+}
+#ContactSection{
+    margin-top: 70px !important;
+}
+.timingCardCon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.timingCard{
+    flex:1;
+    height: fit-content;
+    border: 5px solid black;
+    margin: 20px;
+    padding: 20px;
+    width: 100% !important;
+}
+.timingCardRight{
+    background-image: linear-gradient(to bottom left, royalblue, white);
+    border-radius: 0px 70px 0px 70px;
+}
+.timingCardLeft{
+    background-image: linear-gradient(to bottom right, deeppink, white);
+    border-radius: 70px 0px 70px 0px;
+}
+.timingCardTitle{
+    color: black;
+    text-align:center;
+}
+.timingCardInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    margin-top: 20px;
+}
+.timingCardInfo > h1{
+    color: black;
+}
+.timingCardInfo > h3{
+    color: black;
+    font-style: italic;
+}
+.sendMessageCard{
+    background-color: teal;
+    border-radius: 20px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border:5px double black;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 5px gray;
+    margin-bottom: 20px;
+}
+.messageInput{
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 5px;
+    transition: all 200ms linear;
+}
+.messageInput:focus{
+    font-size: 2em;
+}
+.messageInput textarea{
+background-color: black;
+}
+.messageSend{
+    cursor: pointer;
+    width: 30%;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 200ms linear;
+    color: white;
+    border-radius: 20px;
+    min-width: fit-content;
+}
+.messageSend:hover{
+    width: 90%;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+.success{
+    color: green;
+    text-align: center;
+}
+.hide{
+    display: none !important;
+}
+.footer{
+    background-color: royalblue;
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    color:white;
+    font-size: 1.3em;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer > i{
+    margin-right: 10px;
+}
+.phoneNum{
+    text-align: center;
+    margin-top: -30px;
+    font-size: 1.7em;
+}
+#About{
+    position: absolute;
+    top:500px;
+}
+.faceBook{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms linear;
+}
   @media screen and (max-width: 900px) {
     .NavTitle{
         font-size: 3em;
         margin-right: 20px;
+        line-height: 35px;
     }
     .NavSubTitle{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     .NavTitle{
         margin-bottom: -20px;
     }
+    .carousel{
+        width: 75% !important;
+        margin: auto;
+    }
+    .carousel-item > img{
+        max-height: 300px;
+    }
+    .timingCardInfo{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        width: 100% !important;
+    }
+    .timingCardInfo > h1{
+        line-height: 15px;
+        font-size: 2em;
+    }
+    .timingCardInfo > h3{
+        font-size: 1.5em;
+        line-height: 15px;
+    }
+    .timingCardTitle{
+        font-size: 3em;
+    }
+    .sendMessageCard{
+        width: 75% !important;
+    }
+    #About{
+        position: absolute;
+        top:250px;
+    }
   }
   @media screen and (max-width: 600px) {
     .NavTitle{
-        font-size: 2em !important;
+        font-size: 2em;
         margin-right: 20px;
     }
     .NavLink{
@@ -185,9 +452,6 @@
     .Card{
         flex: 40%;
     }
-    .NavSubTitle{
-        font-size: 0.8em;
-    }
     .NavSubTitleDiv{
         display: block;
         margin: 0px;
@@ -195,5 +459,69 @@
         margin-bottom: -10px;
         text-align: left;
         padding-left: 5px;
+    }
+    .ImageLeft{
+        width: 70%;
+        max-width: 500px;
+    }
+    .ImageRight{
+        width: 100%;
+        background-size: contain;
+    }
+    .hideSMComma{
+        display: none;
+    }
+    .InfoText{
+        width: 75%;
+    }
+    .carousel{
+        width: 100% !important;
+        margin: auto;
+    }
+    .timingCardCon{
+        flex-direction: column;
+    }
+    .timingCard{
+        width: 75% !important;
+        margin: auto;
+        margin-top: 40px;
+    }
+    #About{
+        position: absolute;
+        top:300px;
+    }
+    #Contact{
+        position:relative;
+        top:300px;
+    }
+}
+@media screen and (max-width: 475px) {
+    .NavTitle{
+        font-size: 3em;
+    }
+    .NavLink{
+        font-size: 2em;
+        margin-top: 10px;
+        flex:1;
+    }
+    .NavBar{
+        padding: 0px;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .NavLink:hover{
+        font-size: 2.5em;
+    }
+
+    #AboutSection{
+        margin-top: 160px;
+    }  
+    #About{
+        position: absolute;
+        top:300px;
+    }
+    #Contact{
+        position:relative;
+        top:-200px;
     }
 }
